@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <script>
+        function 伝言する(){
+            if(入力内容.value === ""){
+                alert("内容を入力してください");
+            }else{
+            伝言エリア.innerText = 入力内容.value;
+            alert("伝言をセットしました");
+            }
+        }
+        function 伝言を削除する(){
+            伝言エリア.innerText = "伝言はまだありません";
+            alert("伝言を削除しました");
+        }
+    </script>
+    <style>
+        body{
+            background-color:aquamarine;
+            text-align: center;
+            align-items: center;
+        }
+        div#title{
+            text-align: center;
+        }
+        #pagetitle{
+            font-family: UD Pゴシック;
+            font-style:normal;
+            font-weight: bold;
+            font-size: xx-large;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table id="pagetitle" border="4" bordercolor="green">
+        <tr><td>伝言板</td ></tr>
+    </table>
+    <p id="伝言エリア">伝言はまだありません</p>
+<input id="入力内容"><button onclick="伝言する();">セット</button>
+<button onclick="伝言を削除する();">削除</button>
+</body>
+</html>
